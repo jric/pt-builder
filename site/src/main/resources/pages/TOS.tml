@@ -1,0 +1,11 @@
+<html t:type="layout" title="buildco.global Terms of Service (TOS)"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter"
+        >
+<t:actionlink t:id="back" class="btn btn-primary btn-large">Back to building! &raquo;</t:actionlink>
+
+<t:TOS/>      
+
+<t:actionlink t:id="back" class="btn btn-primary btn-large">Back to building! &raquo;</t:actionlink>
+
+</html>

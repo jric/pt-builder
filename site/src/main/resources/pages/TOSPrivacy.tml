@@ -1,0 +1,12 @@
+<html t:type="layout" title="buildco.global Privacy Policy"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter"
+        >
+
+<t:BackButton>Back to building!</t:BackButton>
+
+<t:Privacy/>
+
+<t:BackButton>Back to building!</t:BackButton>
+
+</html>

@@ -1,0 +1,28 @@
+<html t:type="layout" title="buildco.global FAQ"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter"
+        >
+        
+What would you like to know?
+
+<ul id="questions">
+<li>
+Is my information private?
+<div class="answer">
+We will not share your information unless we have your explicit opt-in.
+</div>
+</li>
+<li>
+How does buildco make money?
+<div class="answer">
+We find ways to connect entrepreneurs like yourself with services you can use.  We may charge our (vetted) affiliates a 
+small fee for placement front and center.
+</div>
+</li>
+</ul>
+
+<span id="more-questions" class="btn btn-secondary btn-large feedback-link" display="What can we answer for you?  Make sure to include your email.">
+I still have Questions &raquo;</span> 
+<t:actionlink t:id="back" class="btn btn-primary btn-large">Back to building! &raquo;</t:actionlink>
+
+</html>

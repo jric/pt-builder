@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- We need a doctype to allow us to use special characters like &nbsp; 
+     We use a "strict" DTD to make IE follow the alignment rules. -->
+     
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<body class="container">
+    <h3>AJAX On Event: the ZoneUpdater Mixin</h3>
+    
+    <noscript class="js-required">
+        ${message:javascript_required}
+    </noscript>     
+
+    This page demonstrates a custom mixin called ZoneUpdater that enables a server-side listener method 
+    to update a zone in response to a client-side event.
+    
+    <div class="eg">
+        <t:form class="form-horizontal">
+            <div class="form-group">
+                <t:label for="firstName" class="col-sm-2"/>
+                <div class="col-sm-4">
+                    <t:textfield t:id="firstName" t:mixins="zoneUpdater" 
+                        ZoneUpdater.clientEvent="keyup" ZoneUpdater.event="firstNameChanged" ZoneUpdater.zone="nameZone"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <t:label for="lastName" class="col-sm-2"/>
+                <div class="col-sm-4">
+                    <t:textfield t:id="lastName" t:mixins="zoneUpdater" 
+                        ZoneUpdater.clientEvent="keyup" ZoneUpdater.event="lastNameChanged" ZoneUpdater.zone="nameZone"/>
+                </div>
+            </div>
+    
+            <t:zone t:id="nameZone" id="nameZone">
+                Welcome ${name}.
+            </t:zone><br/>
+    
+            Note that the following time field does not update because it's not in the zone:  ${serverTime}<br/>
+        </t:form>
+    </div>
+    
+    For those using Tapestry5-jQuery, it provides equivalent functionality with its <em>Bind</em> mixin.<br/><br/>
+    
+    References: 
+    <a href="http://tinybits.blogspot.com/2010/03/new-and-better-zoneupdater.html">Inge's Zone Updater</a>, 
+    <a href="http://tapestry.apache.org/ajax-and-zones.html">Ajax and Zones</a>, 
+    <a href="http://tapestry.apache.org/5.4/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a>, 
+    <a href="http://tapestry.apache.org/5.4/apidocs/org/apache/tapestry5/annotations/RequestParameter.html">@RequestParameter</a>, 
+    <a href="http://tapestry.apache.org/5.4/apidocs/org/apache/tapestry5/services/Request.html">Request</a>, 
+    <a href="http://tapestry.apache.org/5.4/coffeescript/zone.html">t5/core/zone</a>.<br/><br/>
+
+    <t:eventlink event="gohome">Home</t:eventlink><br/><br/>
+
+<!--
+    <t:tabgroup>
+        <t:sourcecodetab src="/web/src/main/java/jumpstart/web/pages/examples/ajax/AjaxOnEvent.tml"/>
+        <t:sourcecodetab src="/web/src/main/java/jumpstart/web/pages/examples/ajax/AjaxOnEvent.java"/>
+        <t:sourcecodetab src="/web/src/main/resources/META-INF/assets/css/examples/js.css"/>
+        <t:sourcecodetab src="/web/src/main/java/jumpstart/web/mixins/ZoneUpdater.java"/>
+        <t:sourcecodetab src="/web/src/main/resources/META-INF/modules/zone-updater.js"/>
+    </t:tabgroup>
+-->
+</body>
+</html>
